@@ -1,0 +1,107 @@
+body {
+    margin: 0px;
+    background-color: rgb(231, 231, 231);
+}
+.header {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(82, 12, 82);
+    margin: auto;
+    display: flex;
+}
+.navbar {
+    width: 5000px;
+    color: white;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: left;
+    padding: 0;
+}
+.navLogo {
+    background-color: rgb(141, 26, 141);
+    height: 40px;
+    width: 15%;
+    display: flex;
+}
+.navLogo .imgLogo {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.navLogo .navSpec .imgSpec {
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.navSelecionada1 {
+    background-color: rgb(141, 26, 141);
+    height: 40px;
+    width: 15%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.navSelecionada1 .navSpec {
+    width: 90%;
+    height: 85%;
+    margin-top: 3px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.navSelecionada2 {
+    background-color: rgb(61, 10, 61);
+    height: 40px;
+    width: 15%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.navSelecionada2 .navSpec {
+    width: 90%;
+    height: 85%;
+    margin-top: 3px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.navSelecionada2 .navSpec:hover {
+    background-color: rgb(73, 12, 73);
+}
+.navSpec {
+    font-family: Cambria;
+}
+.faixa {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(141, 26, 141);
+}
+.bloco {
+    display: flex;
+    justify-content: center;
+}
+.bloco .card {
+    width: 80%;
+    height: 1500px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.bloco .card p {
+    margin-left: 100px;
+}
