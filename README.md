@@ -1,7 +1,3 @@
-# prototipo-site-joca
-tentando fazer muito design com pouco aprendizado
+# Meu site pessoal
 
-Vou registrar aqui um changelog do site
-
-03/04/22
-Foi feito o header interativo, logo e a página home nesse fim de semana de 2 dias
+Aqui é onde eu coloco todas as minhas pra fora, testo códigos e todo tipo de coisa

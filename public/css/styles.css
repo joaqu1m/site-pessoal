@@ -2,99 +2,104 @@ body {
     margin: 0px;
     background-color: rgb(231, 231, 231);
 }
+
 .header {
     width: 100%;
-    height: 40px;
+    height: 80px;
     background-color: rgb(82, 12, 82);
-    margin: auto;
-    display: flex;
 }
+
 .navbar {
-    width: 5000px;
+    width: 100%;
+    height: 40px;
     color: white;
     display: flex;
-    list-style: none;
-    align-items: center;
-    justify-content: left;
     padding: 0;
 }
+
 .navLogo {
-    background-color: rgb(141, 26, 141);
-    height: 40px;
+    min-width: 50px;
     width: 15%;
+    height: 100%;
+    background-color: rgb(141, 26, 141);
     display: flex;
 }
-.navLogo .imgLogo {
+
+.imgLogo {
     width: 35px;
     height: 35px;
     margin-left: 10px;
     margin-top: 5px;
 }
-.navLogo .navSpec .imgSpec {
+
+#imgSpec {
     width: 100px;
+    height: 25px;
     margin-left: 10px;
     margin-top: 10px;
 }
-.navSelecionada1 {
+
+.navAba {
+    height: 100%;
+    width: 15%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selecionada {
+    min-width: 70px;
     background-color: rgb(141, 26, 141);
-    height: 40px;
-    width: 15%;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
-.navSelecionada1 .navSpec {
-    width: 90%;
-    height: 85%;
-    margin-top: 3px;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.navSelecionada2 {
+
+.normal {
     background-color: rgb(61, 10, 61);
-    height: 40px;
-    width: 15%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
-.navSelecionada2 .navSpec {
+
+#quadrado {
+    background-color: rgb(141, 26, 141);
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    display: none;
+}
+
+.navSpec {
     width: 90%;
     height: 85%;
     margin-top: 3px;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
+    font-size: 1em;
+    font-family: "Arial Black";
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
 }
-.navSelecionada2 .navSpec:hover {
+.navSpec:hover {
+    cursor: pointer;
     background-color: rgb(73, 12, 73);
 }
-.navSpec {
-    font-family: Cambria;
+.noHover:hover {
+    cursor: default;
+    background-color: rgb(141, 26, 141);
 }
+
 .faixa {
     width: 100%;
     height: 40px;
     background-color: rgb(141, 26, 141);
 }
+
 .bloco {
     display: flex;
     justify-content: center;
 }
+
 .bloco .card {
     width: 80%;
     height: 1500px;
@@ -102,6 +107,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .bloco .card p {
     margin-left: 100px;
 }

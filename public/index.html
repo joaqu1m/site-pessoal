@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joca</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./assets/imgs/logoGatoBranco.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="header">
+        <div class="navbar">
+            <div class="navLogo">
+                <img src="./assets/imgs/logoGatoBranco.png" class="imgLogo">
+                <img src="./assets/imgs/logoLetreiro.png" id="imgSpec">
+            </div>
+            <div class="navAba selecionada" style="border-top-left-radius: 0px;">
+                <div class="navSpec noHover">
+                    <b>Home</b>
+                </div>
+            </div>
+            <div class="navAba normal">
+                <div class="navSpec" onclick="location.href='abaseries.html';">
+                    <b>Séries</b>
+                </div>
+            </div>
+            <div class="navAba normal">
+                <div class="navSpec" onclick="location.href='abaanimacoes.html';">
+                    <b>Animações</b>
+                </div>
+            </div>
+            <div class="navAba normal">
+                <div class="navSpec" onclick="location.href='abajogos.html';">
+                    <b>Jogos</b>
+                </div>
+            </div>
+            <div class="navAba normal">
+                <div class="navSpec" onclick="location.href='abaextras.html';">
+                    <b>Extras</b>
+                </div>
+            </div>
+            <div id="quadrado"></div>
+        </div>
+        <div class="faixa"></div>
+    </div>
+    <div class="bloco">
+        <div class="card">
+            <button onclick="teste()">Teste</button>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    const testando = document.querySelectorAll('.normal');
+    function teste() {
+        for (var i = 0; i < testando.length; i++) {
+            testando[i].style.display = 'none'
+        }
+        quadrado.style.display = 'block'
+    }
+    if (screen.availWidth < 1000) {
+        imgSpec.style.display = 'none'
+    }
+    if (screen.availWidth < 700) {
+        for (var i = 0; i < testando.length; i++) {
+            testando[i].style.display = 'none'
+        }
+        quadrado.style.display = 'block'
+    }
+</script>
