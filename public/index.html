@@ -11,7 +11,7 @@
 </head>
 
 <div id="abaSelecao">
-    <div class="abaClicavel">Aba 2</div>
+    <div class="abaClicavel" onclick="location.href='teste.html';">GameTest</div>
     <br>
     <div class="abaClicavel">Aba 3</div>
     <br>
@@ -32,8 +32,8 @@
                 </div>
             </div>
             <div class="navAba normal">
-                <div class="navSpec comHover" onclick="location.href='.html';">
-                    <b>Aba 2</b>
+                <div class="navSpec comHover" onclick="location.href='teste.html';">
+                    <b>GameTest</b>
                 </div>
             </div>
             <div class="navAba normal">
@@ -61,8 +61,11 @@
     <div class="headerRepo"></div>
     <div class="bloco" onclick="abaDireitaFechar()">
         <div class="page">
-            <br>
-            <button onclick="teste()">Testar</button>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa nihil beatae id asperiores quasi repellendus? Suscipit quis voluptas ipsum, ea tempora dolor sunt dolorum nobis, sint obcaecati, id voluptatibus quidem.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse odio quia voluptatum maxime quo maiores excepturi nostrum enim, odit fugiat cupiditate cum velit, autem suscipit, totam ex illo magnam reiciendis?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus dignissimos corrupti unde nisi voluptas tempore quis corporis hic quasi ad illo deserunt velit dolorem totam labore maxime quae, obcaecati delectus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dolorum quis architecto perferendis iste sit, nisi quod magni aperiam nulla corporis quas excepturi possimus! Labore quo voluptatem fugiat quam recusandae?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dicta sit, voluptatum assumenda debitis sint alias laudantium, labore similique, quidem qui sunt. Sint reiciendis eaque veritatis fuga, excepturi iusto odio.
         </div>
     </div>
 </body>
@@ -111,17 +114,4 @@
             abaSelecao.style.display = 'none'
             abaAberta = 0
         }}
-    function teste() {
-        imgSpec.style.display = 'none'
-        for (var i = 0; i < classeNormal.length; i++) {
-            classeNormal[i].style.display = 'none'
-        }
-        classeSelecionada.style.display = 'none'
-        classeFaixa.style.display = 'none'
-        classeHeader.style.backgroundColor = 'rgb(141, 26, 141)'
-        classeHeader.style.height = '40px'
-        classeHeaderRepo.style.height = '40px'
-        quadrado.style.display = 'block'
-        textoMeio.style.display = 'flex'
-    }
 </script>
