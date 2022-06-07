@@ -1,0 +1,9 @@
+O valor <input type="number" id="in1number"> é qual porcentagem de <input type="number" id="in2number">?
+<br><br>
+<button onclick="btnCalcular()">Calcular</button>
+<script>
+    function btnCalcular() {
+        var calculo = (Number(in1number.value) * 100) / Number(in2number.value)
+        divunica.innerHTML = `${calculo.toFixed(2)}%`
+    }
+</script>

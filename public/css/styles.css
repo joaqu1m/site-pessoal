@@ -1,12 +1,13 @@
 body {
     margin: 0px;
-    background-color: rgb(231, 231, 231);
 }
 
 .header {
     width: 100%;
     height: 80px;
     background-color: rgb(82, 12, 82);
+    position: fixed;
+    z-index: 1;
 }
 
 .navbar {
@@ -59,12 +60,29 @@ body {
 }
 
 #quadrado {
-    background-color: rgb(141, 26, 141);
     width: 40px;
     height: 40px;
+    background-color: rgb(141, 26, 141);
+    background-image: url('.././assets/imgs/3barras.html.png');
+    background-size: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
     right: 0;
+    cursor: pointer;
     display: none;
+}
+
+#textoMeio {
+    width: 10%;
+    height: 90%;
+    margin-left: 45%;
+    margin-top: 10px;
+    font-family: "Arial Black";
+    position: absolute;
+    display: none;
+    justify-content: center;
+    text-align: center;
 }
 
 .navSpec {
@@ -80,13 +98,9 @@ body {
     align-items: center;
     justify-content: center;
 }
-.navSpec:hover {
+.comHover:hover {
     cursor: pointer;
     background-color: rgb(73, 12, 73);
-}
-.noHover:hover {
-    cursor: default;
-    background-color: rgb(141, 26, 141);
 }
 
 .faixa {
@@ -96,11 +110,14 @@ body {
 }
 
 .bloco {
+    background-color: rgb(231, 231, 231);
     display: flex;
     justify-content: center;
+    overflow: hidden;
+    z-index: 2;
 }
 
-.bloco .card {
+.bloco .page {
     width: 80%;
     height: 1500px;
     background-color: white;
@@ -108,6 +125,30 @@ body {
     flex-direction: column;
 }
 
-.bloco .card p {
-    margin-left: 100px;
+#abaSelecao {
+    width: 50%;
+    height: 100%;
+    margin-top: 40px;
+    background-color: rgb(141, 26, 141);
+    position: fixed;
+    right: 0;
+    z-index: 1;
+    display: none;
+}
+.abaClicavel {
+    width: 90%;
+    height: 100px;
+    background-color: rgb(73, 12, 73);
+    font-family: "Arial Black";
+    color: white;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.headerRepo {
+    width: 100%;
+    height: 80px;
 }

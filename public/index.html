@@ -10,6 +10,15 @@
     <link rel="shortcut icon" href="./assets/imgs/logoGatoBranco.png" type="image/x-icon">
 </head>
 
+<div id="abaSelecao">
+    <div class="abaClicavel">Aba 2</div>
+    <br>
+    <div class="abaClicavel">Aba 3</div>
+    <br>
+    <div class="abaClicavel">Aba 4</div>
+    <br>
+    <div class="abaClicavel">Extras</div>
+</div>
 <body>
     <div class="header">
         <div class="navbar">
@@ -18,57 +27,101 @@
                 <img src="./assets/imgs/logoLetreiro.png" id="imgSpec">
             </div>
             <div class="navAba selecionada" style="border-top-left-radius: 0px;">
-                <div class="navSpec noHover">
+                <div class="navSpec">
                     <b>Home</b>
                 </div>
             </div>
             <div class="navAba normal">
-                <div class="navSpec" onclick="location.href='abaseries.html';">
-                    <b>Séries</b>
+                <div class="navSpec comHover" onclick="location.href='.html';">
+                    <b>Aba 2</b>
                 </div>
             </div>
             <div class="navAba normal">
-                <div class="navSpec" onclick="location.href='abaanimacoes.html';">
-                    <b>Animações</b>
+                <div class="navSpec comHover" onclick="location.href='.html';">
+                    <b>Aba 3</b>
                 </div>
             </div>
             <div class="navAba normal">
-                <div class="navSpec" onclick="location.href='abajogos.html';">
-                    <b>Jogos</b>
+                <div class="navSpec comHover" onclick="location.href='.html';">
+                    <b>Aba 4</b>
                 </div>
             </div>
             <div class="navAba normal">
-                <div class="navSpec" onclick="location.href='abaextras.html';">
+                <div class="navSpec comHover" onclick="location.href='.html';">
                     <b>Extras</b>
                 </div>
             </div>
-            <div id="quadrado"></div>
+            <div id="quadrado" onclick="abaDireita()"></div>
+            <div id="textoMeio">
+                Home
+            </div>
         </div>
         <div class="faixa"></div>
     </div>
-    <div class="bloco">
-        <div class="card">
-            <button onclick="teste()">Teste</button>
+    <div class="headerRepo"></div>
+    <div class="bloco" onclick="abaDireitaFechar()">
+        <div class="page">
+            <br>
+            <button onclick="teste()">Testar</button>
         </div>
     </div>
 </body>
 
 </html>
 <script>
-    const testando = document.querySelectorAll('.normal');
-    function teste() {
-        for (var i = 0; i < testando.length; i++) {
-            testando[i].style.display = 'none'
-        }
-        quadrado.style.display = 'block'
-    }
-    if (screen.availWidth < 1000) {
+    let abaAberta = 0
+
+    const classeHeader = document.querySelector('.header');
+    const classeBloco = document.querySelector('.bloco');
+    const classeFaixa = document.querySelector('.faixa');
+    const classeSelecionada = document.querySelector('.selecionada');
+    const classeNormal = document.querySelectorAll('.normal');
+    const classeHeaderRepo = document.querySelector('.headerRepo');
+
+    if (screen.width < 1000) {
         imgSpec.style.display = 'none'
     }
-    if (screen.availWidth < 700) {
-        for (var i = 0; i < testando.length; i++) {
-            testando[i].style.display = 'none'
+    if (screen.width < 700) {
+        for (var i = 0; i < classeNormal.length; i++) {
+            classeNormal[i].style.display = 'none'
         }
+        classeSelecionada.style.display = 'none'
+        classeFaixa.style.display = 'none'
+        classeHeader.style.backgroundColor = 'rgb(141, 26, 141)'
+        classeHeader.style.height = '40px'
+        classeHeaderRepo.style.height = '40px'
         quadrado.style.display = 'block'
+        textoMeio.style.display = 'flex'
+    }
+
+    function abaDireita() {
+        if (abaAberta == 0) {
+            classeBloco.style.filter = 'brightness(50%)'
+            abaSelecao.style.display = 'block'
+            abaAberta = 1
+        } else if (abaAberta == 1) {
+            classeBloco.style.filter = 'brightness(100%)'
+            abaSelecao.style.display = 'none'
+            abaAberta = 0
+        }
+    }
+    function abaDireitaFechar() {
+            if (abaAberta == 1) {
+            classeBloco.style.filter = 'brightness(100%)'
+            abaSelecao.style.display = 'none'
+            abaAberta = 0
+        }}
+    function teste() {
+        imgSpec.style.display = 'none'
+        for (var i = 0; i < classeNormal.length; i++) {
+            classeNormal[i].style.display = 'none'
+        }
+        classeSelecionada.style.display = 'none'
+        classeFaixa.style.display = 'none'
+        classeHeader.style.backgroundColor = 'rgb(141, 26, 141)'
+        classeHeader.style.height = '40px'
+        classeHeaderRepo.style.height = '40px'
+        quadrado.style.display = 'block'
+        textoMeio.style.display = 'flex'
     }
 </script>
