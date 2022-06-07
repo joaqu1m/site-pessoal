@@ -71,47 +71,4 @@
 </body>
 
 </html>
-<script>
-    let abaAberta = 0
-
-    const classeHeader = document.querySelector('.header');
-    const classeBloco = document.querySelector('.bloco');
-    const classeFaixa = document.querySelector('.faixa');
-    const classeSelecionada = document.querySelector('.selecionada');
-    const classeNormal = document.querySelectorAll('.normal');
-    const classeHeaderRepo = document.querySelector('.headerRepo');
-
-    if (screen.width < 1000) {
-        imgSpec.style.display = 'none'
-    }
-    if (screen.width < 700) {
-        for (var i = 0; i < classeNormal.length; i++) {
-            classeNormal[i].style.display = 'none'
-        }
-        classeSelecionada.style.display = 'none'
-        classeFaixa.style.display = 'none'
-        classeHeader.style.backgroundColor = 'rgb(141, 26, 141)'
-        classeHeader.style.height = '40px'
-        classeHeaderRepo.style.height = '40px'
-        quadrado.style.display = 'block'
-        textoMeio.style.display = 'flex'
-    }
-
-    function abaDireita() {
-        if (abaAberta == 0) {
-            classeBloco.style.filter = 'brightness(50%)'
-            abaSelecao.style.display = 'block'
-            abaAberta = 1
-        } else if (abaAberta == 1) {
-            classeBloco.style.filter = 'brightness(100%)'
-            abaSelecao.style.display = 'none'
-            abaAberta = 0
-        }
-    }
-    function abaDireitaFechar() {
-            if (abaAberta == 1) {
-            classeBloco.style.filter = 'brightness(100%)'
-            abaSelecao.style.display = 'none'
-            abaAberta = 0
-        }}
-</script>
+<script type="text/javascript" src="js/responsive.js"></script>

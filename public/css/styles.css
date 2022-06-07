@@ -98,6 +98,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .comHover:hover {
     cursor: pointer;
     background-color: rgb(73, 12, 73);
