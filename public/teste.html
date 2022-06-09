@@ -29,6 +29,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            transition: 0.1s;
         }
         #boneco {
             width: 50px;
@@ -51,10 +52,14 @@
     let charPosicaoX = 400
     let charPosicaoY = 400
 
-    document.addEventListener('keydown', (event) => {
+    document.addEventListener('keydown', andar);
+
+    function andar() {
         var name = event.key;
         var code = event.code;
         console.log(`Key pressed: ${name} \n Key code value: ${code}`);
+
+        document.removeEventListener('keydown', andar);
 
         if (name == 'ArrowLeft') {
             posicaoX += 50
@@ -69,5 +74,8 @@
             posicaoY -= 50
             game.style.backgroundPosition = `${posicaoX}px ${posicaoY}px`
         }
-    });
+        setTimeout(() => {
+          document.addEventListener('keydown', andar);
+        }, 100)
+    }
 </script>

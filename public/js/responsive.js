@@ -8,6 +8,7 @@ const classeFaixa = document.querySelector('.faixa');
 const classeSelecionada = document.querySelector('.selecionada');
 const classeNormal = document.querySelectorAll('.normal');
 const classeHeaderRepo = document.querySelector('.headerRepo');
+const classePage = document.querySelector('.page');
 
 calcularDimensoes();
 
@@ -39,6 +40,7 @@ function redimensionarHeader() {
         classeHeaderRepo.style.height = '40px'
         quadrado.style.display = 'block'
         textoMeio.style.display = 'flex'
+        classePage.style.width = '100%'
     }
     if (width >= 700) {
         for (var i = 0; i < classeNormal.length; i++) {
@@ -51,6 +53,7 @@ function redimensionarHeader() {
         classeHeaderRepo.style.height = '80px'
         quadrado.style.display = 'none'
         textoMeio.style.display = 'none'
+        classePage.style.width = '80%'
     }
 }
 

@@ -158,9 +158,14 @@ Pagina
     height: 80px;
 }
 
+.postcard {
+    width: 500px;
+    height: 355.4px;
+}
+
 .postcardPlaceholder {
-    width: 50%;
-    height: 35.54%;
+    width: 100%;
+    height: 100%;
     perspective: 1000px;
 }
 
@@ -173,7 +178,7 @@ Pagina
     transform-style: preserve-3d;
 }
 
-.postcardPlaceholder:hover .postcardInner {
+.virado {
     transform: rotateY(180deg);
 }
 
@@ -185,14 +190,47 @@ Pagina
     backface-visibility: hidden;
 }
 
+.postcardBack .postcardBackLeft {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.postcardBack .postcardBackRight {
+    width: 50%;
+    height: 100%;
+}
+
 .postcardBack {
     background-image: url(".././assets/imgs/postcardBack.png");
     background-size: contain;
     background-repeat: no-repeat;
     color: white;
     transform: rotateY(180deg);
+    display: flex;
 }
 
 .postalNewsletter {
     width: 100%;
+}
+
+.formularioNewsletter {
+    width: 100%;
+    padding: 3px;
+    text-align: center;
+    color: black;
+}
+
+.postcardBtnVoltar {
+    width: 40%;
+    height: 10%;
+    background-color: #0184de;
+    border: 2px solid #003d77;
+    font-family: "Arial Black";
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
 }
