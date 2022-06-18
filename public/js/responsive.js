@@ -55,6 +55,10 @@ function redimensionarHeader() {
         textoMeio.style.display = 'none'
         classePage.style.width = '80%'
     }
+
+    if (typeof redimensionarSettings == 'function') { 
+        redimensionarSettings();
+    }
 }
 
 window.addEventListener("resize", calcularDimensoes);

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse test</title>
+    <style>
+        html {
+            cursor: none;
+        }
+        body {
+            margin: 0;
+        }
+        #mouseCustom {
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            position: fixed;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="mouseCustom"></div>
+</body>
+</html>
+<script>
+    let mouseX = ''
+    let mouseY = ''
+
+    function calcularCoord() {
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+        console.log(event)
+        moverMouseCustom();
+    }
+    function moverMouseCustom() {
+        let posicaoX = mouseX - 5
+        let posicaoY = mouseY - 5
+
+        mouseCustom.style.marginLeft = `${posicaoX}px`
+        mouseCustom.style.marginTop = `${posicaoY}px`
+    }
+
+    document.addEventListener('mousemove', calcularCoord);
+
+    // Tirar o contextMenu do botão direito
+    document.addEventListener('contextmenu', event => event.preventDefault());
+</script>

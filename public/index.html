@@ -69,7 +69,7 @@
             <div class="postcard">
                 <div class="postcardPlaceholder">
                     <div class="postcardInner">
-                        <div class="postcardFront" onclick="virar()" style="cursor: pointer;">
+                        <div class="postcardFront" onclick="virar(0)" style="cursor: pointer;">
                             <img src="./assets/imgs/postcardFront.png" class="postalNewsletter"></img>
                         </div>
                         <div class="postcardBack">
@@ -82,7 +82,7 @@
                                     <input type="hidden" value="1" name="embed"/>
                                     <input style="border:1px solid black" type="submit" value="Assine" />
                                 </form>
-                                <button onclick="desvirar()" class="postcardBtnVoltar">Voltar</button>
+                                <button onclick="virar(1)" class="postcardBtnVoltar">Voltar</button>
                             </div>
                             <div class="postcardBackRight"></div>
                         </div>
@@ -91,17 +91,52 @@
             </div>
         </div>
     </div>
+    <div id="cookieClick">
+        <div class="cookieSection">
+            <img src="./assets/imgs/Cookie.png" height="70%">
+            <span>Permitir Cookies?</span>
+        </div>
+        <div class="cookieBtnSection">
+            <div id="cookieBlock" onmouseover="invertBtnCookie(0)" onmouseleave="invertBtnCookie(1)">
+                <div class="btnCookie" style="background-color: transparent; border: 0;" onclick="permitir()"></div>
+            </div>
+            <button class="btnCookie" id="cookieL">Recusar</button>
+            <button class="btnCookie" id="cookieR" onclick="permitir()">Aceitar</button>
+        </div>
+    </div>
 </body>
 
 </html>
-<script type="text/javascript" src="js/responsive.js"></script>
 <script>
-    const classePostcardInner = document.querySelector('.postcardInner');
-
-    function virar() {
-        classePostcardInner.classList.add('virado')
+    function redimensionarSettings() {
+        if (width < 700) {
+            cookieClick.style.display = 'none'
+        } else if (width >= 700) {
+            cookieClick.style.display = 'block'
+        }
     }
-    function desvirar() {
-        classePostcardInner.classList.remove('virado')
+    function virar(virado) {
+        const classePostcardInner = document.querySelector('.postcardInner');
+
+        if (virado == 0) {
+            classePostcardInner.classList.add('virado')
+        }
+        if (virado == 1) {
+            classePostcardInner.classList.remove('virado')
+        }
+    }
+    function invertBtnCookie(invertido) {
+        if (invertido == 0) {
+            cookieR.style.marginLeft = '197.5px'
+            cookieL.style.marginLeft = '22.5px'
+        }
+        if (invertido == 1) {
+            cookieR.style.marginLeft = '22.5px'
+            cookieL.style.marginLeft = '197.5px'
+        }
+    }
+    function permitir() {
+        cookieClick.style.display = 'none';
     }
 </script>
+<script type="text/javascript" src="js/responsive.js"></script>

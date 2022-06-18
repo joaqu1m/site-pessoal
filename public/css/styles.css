@@ -234,3 +234,58 @@ Pagina
     border-radius: 10px;
     cursor: pointer;
 }
+
+#cookieClick {
+    width: 350px;
+    height: 250px;
+    position: fixed;
+    bottom: 1vh;
+    right: 1vh;
+    background-color: rgb(241, 188, 243);
+    border: 2px solid rgb(209, 127, 230);
+}
+.cookieSection {
+    width: 100%;
+    height: 67%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Arial Black";
+    font-size: 20px;
+    color: #b438ae;
+}
+.cookieBtnSection {
+    width: 100%;
+    height: 33%;
+    display: flex;
+    align-items: center;
+}
+#cookieBlock {
+    width: 50%;
+    height: 83px;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+}
+.btnCookie {
+    height: 60px;
+    width: 130px;
+    background-color: #b53be6;
+    border: 2px solid #a62cb6;
+    font-family: "Arial Black";
+    color: rgb(240, 191, 252);
+    position: absolute;
+    transition: 0.1s;
+    cursor: pointer;
+    font-size: 20px;
+}
+#cookieR {
+    margin-left: 22.5px;
+}
+#cookieL {
+    margin-left: 197.5px;
+}
